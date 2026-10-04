@@ -13,21 +13,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
-    <script>
-      // If GitHub Pages serves this raw uncompiled root file, redirect to the compiled docs/ folder
-      if (window.location.hostname.endsWith('github.io')) {
-        var path = window.location.pathname;
-        if (!path.includes('/docs')) {
-          var repo = path.split('/').filter(Boolean)[0] || '';
-          if (repo) {
-            window.location.replace('/' + repo + '/docs/' + window.location.search + window.location.hash);
-          }
-        }
-      }
-    </script>
   </head>
   <body class="bg-[#0B0616] text-[#FDF2F8] antialiased selection:bg-[#F472B6]/30 selection:text-white">
     <div id="root"></div>
+    <script>
+      if (window.location.hostname.endsWith('github.io')) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = './docs/assets/index-BPB0MSXE.css';
+        document.head.appendChild(link);
+
+        var script = document.createElement('script');
+        script.type = 'module';
+        script.crossOrigin = 'anonymous';
+        script.src = './docs/assets/index-T0UBa9NT.js';
+        document.body.appendChild(script);
+      }
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
